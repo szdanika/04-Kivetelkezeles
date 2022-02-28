@@ -8,7 +8,7 @@ namespace _04_Kivetelkezeles
 {
     internal interface IKomponens
     {
-        public int teljesitmeny { get; set; }
+        public int Teljesitmeny { get; set; }
         public bool Allapot { get; set; }
         public void Aktival();
         public void DeAktival();
