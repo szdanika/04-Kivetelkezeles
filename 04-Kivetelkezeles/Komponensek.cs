@@ -42,12 +42,18 @@ namespace _04_Kivetelkezeles
 
         public void Aktival()
         {
+            if (Allapot == true)
+                throw new InvalidOperationException();
             Allapot=true;
-            Teljesitmeny = -1 * Teljesitmeny;
+            //Teljesitmeny = 1 * Teljesitmeny;
+            if(Teljesitmeny == 0)
+                throw new NotSupportedException();
         }
 
         public void DeAktival()
         {
+            if(Allapot == false)
+                throw new InvalidOperationException("Nem sikerült deaktiválni a rektort");
             Allapot = false;
             Teljesitmeny=0;
         }

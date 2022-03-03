@@ -21,7 +21,7 @@ namespace _04_Kivetelkezeles
     {
         public NemDeaktivalhatoKivetelException(string message, Exception e) : base(message,e)
         {
-
+            Console.WriteLine(message);
         }
     }
     class KomponensNemFerElKivetelException : Exception
@@ -31,6 +31,7 @@ namespace _04_Kivetelkezeles
         public KomponensNemFerElKivetelException(string message, IKomponens komponens) : base(message)
         {
             this.komponens = komponens;
+            Console.WriteLine(message +""+ komponens.ToString().Split('.')[1]);
         }
     }
     class NincsElegEnergiaKivetelException : Exception
